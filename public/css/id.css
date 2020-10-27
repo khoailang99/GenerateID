@@ -1,0 +1,97 @@
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+  background: #4ecfcf;
+}
+.container__box-ids {
+  width: 600px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  box-shadow: 2px 2px 30px grey, -2px -2px 30px grey;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.box-ids__title-section {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.box-ids__acitity-ids {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  align-items: center;
+  text-align: center;
+}
+
+.item-nameId__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f6f6f6;
+  padding: 10px;
+  border-radius: 5px;
+}
+.item-nameId__container svg {
+  width: 35px;
+  height: 35px;
+}
+
+.lun__item-nameId {
+  margin-bottom: 7px;
+}
+
+.usage-status, .item__part-delete-id {
+  width: 10%;
+}
+
+.us__unused, .us__used {
+  display: none;
+}
+
+.us__unused.active, .us__used.active, .in__v__notice-copied.active {
+  display: inline-block;
+}
+
+.item-nameId__value {
+  width: 80%;
+  text-align: center;
+  font-size: 20px;
+  transition: 0.15s;
+}
+.item-nameId__value:active{
+  font-size: 24px;
+}
+.item-nameId__value:hover {
+  cursor: pointer;
+}
+.in__v__notice-copied {
+  color: #db7171;
+  display: none;
+}
+
+.pdi__icon-delete {
+  border-radius: 5px;
+  text-align: center;
+  opacity: 0.3;
+}
+
+/* Phân trang */
+.pa__list-page-numbers {
+  display: flex;
+  justify-content: center;
+}
+.pa__list-page-numbers li{
+  margin-right: 5px;
+}
+.pa__list-page-numbers .active {
+  color: #fff;
+  border-color: #1435c3;
+  background: #1435c3;
+}
