@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="/css/reset.css">
+	<link rel="stylesheet" href="/css/id.css">
+	<!-- CSS Alertify-->
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css"/>
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="container__box-ids">
+			<div class="box-ids__title-section">
+				<h3> Lấy mã ID duy nhất! </h3>
+				<cite> (Click vào ID để copy) </cite>
+			</div>
+			<div class="box-ids__acitity-ids mb-2">
+				<div class="ai__page_navigation">
+					<div class="form-group d-flex justify-content-start align-items-center">
+						<label for="page" class="pr-2">Page:</label>
+						<input type="number" value="1" class="form-control w-50 aic__input-page" id="page" min="1" max="200">
+					</div>
+				</div>
+				<div class="ai__checked_ids">
+					<div class="form-check">
+						<label class="form-check-label">
+							<input type="radio" name="radioUsageS" class="form-check-input checked_ids__checkbox" value="1">Used
+						</label>
+					</div>
+				</div>
+				<div class="ai__unchecked_ids">
+					<div class="form-check">
+						<label class="form-check-label">
+							<input type="radio" name="radioUsageS" class="form-check-input unchecked_ids__checkbox" checked value="2">Unused
+						</label>
+					</div>
+				</div>
+				<div class="ai__update_ids">
+					<button type="button" class="btn btn-success update_ids__btn">Update</button>
+				</div>
+			</div>
+			<ul class="list-unique-name">	
+
+				<%- include('list_ids', {ids, totalIds}); %>
+			</ul>
+			<div class="paging-area">
+				<ul class="pa__list-page-numbers">
+					<li class="left-arow">
+						<button type="button" class="lf__prev-page btn btn-link" data-page="0">
+							<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="16" height="16" viewBox="0 0 24 24" stroke-width="3" stroke="#3F51B5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+								<polyline points="15 6 9 12 15 18" />
+							</svg>
+						</button>
+					</li>
+		
+					<li class="right-arow">
+						<button type="button" class="rr__next-page btn btn-link" data-page="2">
+							<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="16" height="16" viewBox="0 0 24 24" stroke-width="3" stroke="#3F51B5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+								<polyline points="9 6 15 12 9 18" />
+							</svg>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script type="module" src="/js/id.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+</body>
+</html>									
