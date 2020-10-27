@@ -1,6 +1,3 @@
-# GenerateID
-Tạo ID duy nhất!
-
 ## Chạy project
 1. Tạo db: geneate_id -> tạo collection: ids
 2. Tải về (git clone hoặc tải file .zip)
